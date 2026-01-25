@@ -100,7 +100,7 @@ console.log();
 // 14. Object Methods (Method Chaining)
 console.log('14. OBJECT METHODS (Method Chaining):');
 const calcResult = functions.calculator.add(10).multiply(2).subtract(5).getResult();
-console.log('Result: (10 + 10) * 2 - 5 =', calcResult);
+console.log('Result: (0 + 10) * 2 - 5 =', calcResult);
 console.log();
 
 // 15. Pure Functions

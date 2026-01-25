@@ -65,16 +65,16 @@ const result = (function() {
 // 7. ASYNC FUNCTIONS
 // Functions that handle asynchronous operations
 async function fetchData(url) {
-    try {
-        // Simulating async operation
-        return new Promise((resolve) => {
-            setTimeout(() => {
+    // Simulating async operation
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            if (url) {
                 resolve(`Data from ${url}`);
-            }, 1000);
-        });
-    } catch (error) {
-        console.error('Error fetching data:', error);
-    }
+            } else {
+                reject(new Error('URL is required'));
+            }
+        }, 1000);
+    });
 }
 
 // 8. GENERATOR FUNCTIONS
