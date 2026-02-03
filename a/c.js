@@ -332,3 +332,123 @@ export default function Page() {
   return <button>Click</button>;
 
 }
+
+// With variables you can write
+const x = () => {}
+// but you cannot write
+Page() {} without the function keyword.
+
+// Let’s explain this simply and logically 👇
+
+// 🧩 WHY THIS WORKS
+// ✅ Variable + Arrow Function (Assignment)
+const Page = () => {}
+
+
+// Because this is assignment syntax:
+
+// variable = value
+
+
+// Here:
+
+// Page = variable name
+
+() => {} = function value
+
+// So JavaScript reads it as:
+
+// “Store this function inside Page”
+
+// ❌ WHY THIS DOES NOT WORK
+// ❌ Without keyword
+Page() {}
+
+
+// JavaScript says:
+
+// ❓ What is Page?
+// ❓ Is it a call?
+// ❓ Is it a class?
+// ❓ Is it a label?
+
+// There is no rule in JS grammar for:
+
+// Name(parameters) { body }
+
+
+// So it throws syntax error.
+
+// 🧠 JavaScript HAS ONLY TWO WAYS TO CREATE FUNCTIONS
+// 1️⃣ Function Declaration (Keyword Based)
+
+// You MUST use function keyword:
+
+function Page() {}
+
+
+Pattern:
+
+function name() {}
+
+// 2️⃣ Function Expression (Variable Based)
+
+// You assign a function to a variable:
+
+Arrow:
+const Page = () => {}
+
+Normal:
+const Page = function () {}
+
+
+// Pattern:
+
+// variable = function
+
+⚖️ COMPARISON (YOUR CONFUSION CLEARED)
+Syntax	Works?	Why
+function Page(){}	✅	JS keyword rule
+const Page = () => {}	✅	Assignment rule
+Page() {}	❌	No grammar rule
+fun Page(){}	❌	fun is not JS keyword
+// 🧠 REAL WORLD ANALOGY
+
+// Think like this:
+
+// With keyword:
+
+function = "create function command"
+
+// With variable:
+
+const Page = "store function in Page"
+
+// But this:
+
+Page() {}
+
+
+// Is like saying:
+
+// “Create something”
+// without telling JS what command to use.
+
+// 🏆 FINAL RULE (MEMORIZE)
+
+// 👉 If NO variable → MUST use function
+
+// 👉 If using variable → MUST use =
+
+// ✅ Valid
+function Page() {}
+
+const Page = () => {}
+
+const Page = function () {}
+
+❌ Invalid
+Page() {}
+
+fun Page() {}
+
