@@ -205,11 +205,7 @@ export default () => <div>Page</div>;
 // ❌ SECTION 7: INVALID / WRONG SYNTAX (WILL BREAK)
 // ===================================================
 
-// ❌ WRONG: "fun" is NOT a JavaScript keyword
-fun Page() {}
 
-// ❌ WRONG: "async fun" is NOT valid
-async fun Page() {}
 
 // ❌ WRONG: Cannot use "export default const" together
 export default const Page = () => {}
@@ -334,4 +330,5 @@ export default async function Page() {}
 
 export default function Page() {
   return <button>Click</button>;
+
 }
