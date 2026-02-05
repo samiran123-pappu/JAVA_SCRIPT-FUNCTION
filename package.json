@@ -1,0 +1,19 @@
+{
+  "name": "javascript-functions",
+  "version": "1.0.0",
+  "description": "Comprehensive guide to JavaScript functions with examples",
+  "main": "javascript-functions.js",
+  "scripts": {
+    "demo": "node demo.js",
+    "test": "node demo.js"
+  },
+  "keywords": [
+    "javascript",
+    "functions",
+    "es6",
+    "tutorial",
+    "examples"
+  ],
+  "author": "",
+  "license": "MIT"
+}
