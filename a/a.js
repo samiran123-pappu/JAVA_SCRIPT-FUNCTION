@@ -44,6 +44,25 @@ greetAsync().then(console.log);
 
 
 
+
+
+
+
+
+function ConvexClerkProvider({ children }: { children: React.ReactNode }) {
+    return (
+        <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
+            <ConvexProviderWithClerk client={convex} useAuth={useAuth}>
+                {children}
+            </ConvexProviderWithClerk>
+        </ClerkProvider>
+    )
+}
+export default ConvexClerkProvider;
+
+
+
+
 export default {
   providers: [
     {
@@ -59,6 +78,7 @@ export default {
 
 
 
+
 export default defineSchema({
     users: defineTable({
         name: v.string(),
@@ -68,6 +88,9 @@ export default defineSchema({
         clerkId: v.string(),
     }).index("by_clerk_id", ["clerkId"])
 })
+
+
+
 
 
 export default function Home() {
@@ -84,6 +107,8 @@ export default function Home() {
     </div>
   );
 }
+
+
 
 
 
@@ -107,6 +132,9 @@ export default function RootLayout({
 
 
 
+
+
+
 function ConvexClerkProvider({ children }: { children: React.ReactNode }) {
     return (
         <ClerkProvider publishableKey={process.env.NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY}>
@@ -117,6 +145,10 @@ function ConvexClerkProvider({ children }: { children: React.ReactNode }) {
     )
 }
 export default ConvexClerkProvider;
+
+
+
+
 
 function CardContent({ className, ...props }: React.ComponentProps<"div">) {
   return (
@@ -131,6 +163,11 @@ export {
   CardContent
 }
 
+
+
+
+
+    
 const buttonVariants = cva(
   "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg:not([class*='size-'])]:size-4 shrink-0 [&_svg]:shrink-0 outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive",
   {
@@ -166,6 +203,10 @@ const buttonVariants = cva(
 )
 
 
+
+
+
+
 function Button({
   className,
   variant = "default",
@@ -188,8 +229,9 @@ function Button({
     />
   )
 }
-
 export { Button, buttonVariants }
+
+
 
 
 
@@ -205,9 +247,17 @@ export const config = {
 
 
 
+
+
+
 export function cn(...inputs: ClassValue[]) {
   return twMerge(clsx(inputs))
 }
+
+
+
+
+
 
 
 export declare const internal: FilterApi<
@@ -215,5 +265,16 @@ export declare const internal: FilterApi<
   FunctionReference<any, "internal">
 >;
 
-export declare const components: {};
+
+
+
+
+
+
+export declare const components: {
+    return (
+        
+    )
+};
+
 
